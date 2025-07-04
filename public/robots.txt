@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://crewtiv.com
+
+# Sitemaps
+Sitemap: https://crewtiv.com/sitemap.xml
