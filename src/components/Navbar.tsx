@@ -9,7 +9,7 @@ export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false)
   const servicesRef = useRef<HTMLDivElement>(null)
 
-  // Close dropdown when clicking outside
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -32,7 +32,7 @@ export default function Navbar() {
             <span className="text-xl font-bold text-[#f22a98]">Crewtiv</span>
           </Link>
 
-          {/* Desktop Menu */}
+       
           <div className="hidden md:flex items-center space-x-6">
             <NavItem href="/">Home</NavItem>
 
@@ -58,11 +58,11 @@ export default function Navbar() {
               )}
             </div>
 
-            <NavItem href="/services">Project</NavItem>
-            <NavItem href="/contact">Blog</NavItem>
+            <NavItem href="/project-page">Project</NavItem>
+            <NavItem href="/list-articles">Blog</NavItem>
           </div>
 
-          {/* Mobile Hamburger */}
+        
           <div className="md:hidden">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
@@ -73,7 +73,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* hp */}
         {menuOpen && (
           <div className="md:hidden mt-2 space-y-2">
             <NavItem href="/">Home</NavItem>
@@ -92,7 +92,7 @@ export default function Navbar() {
                 </div>
               )}
             </div>
-            <NavItem href="/services">Project</NavItem>
+            <NavItem href="/project-page">Project</NavItem>
             <NavItem href="/contact">Blog</NavItem>
           </div>
         )}

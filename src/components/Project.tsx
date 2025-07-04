@@ -63,7 +63,7 @@ export const Project = () => {
               className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
             />
 
-            {/* Overlay */}
+         
             <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-center items-center text-center p-4">
               <h3 className="text-2xl font-semibold mb-2 text-[#f22a98]">{project.title}</h3>
               <p className="text-sm text-gray-300">{project.description}</p>
@@ -72,7 +72,7 @@ export const Project = () => {
         ))}
       </div>
 
-      {/* Tombol tampilkan lebih */}
+
       <div className="mt-16 flex justify-center">
         <button className="bg-[#f22a98] hover:bg-[#d0167f] text-white font-semibold px-6 py-3 rounded-full shadow-lg transition">
           Tampilkan Lebih

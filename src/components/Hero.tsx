@@ -16,7 +16,7 @@ export default function Hero() {
   return (
     <section className="relative bg-[url('/hero-bg.png')] bg-cover bg-center bg-fixed text-white overflow-hidden min-h-screen flex items-center">
       <div className="mx-auto px-6 py-7 lg:px-14 flex flex-col md:flex-row items-center justify-around w-full">
-        {/* Text Section */}
+       
         <div className="max-w-9xl ">
           <h2 className="text-7xl ml-5 sm:text-9xl sm:ml-30 font-bold leading-tight">
             Make <br />
