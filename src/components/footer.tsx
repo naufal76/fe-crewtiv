@@ -1,5 +1,5 @@
 'use client'
-
+import Link from 'next/link'
 import Image from 'next/image'
 import { FaInstagram, FaEnvelope, FaWhatsapp } from 'react-icons/fa'
 
@@ -25,13 +25,13 @@ export default function Footer() {
         </div>
 
        
-        <div className="flex flex-col gap-3 text-white/80">
-          <h4 className="text-lg font-semibold text-white">Navigasi</h4>
-          <a href="/" className="hover:text-[#f22a98] transition">Home</a>
-          <a href="#pricing" className="hover:text-[#f22a98] transition">Layanan</a>
-          <a href="#testimonials" className="hover:text-[#f22a98] transition">Project</a>
-          <a href="#blog" className="hover:text-[#f22a98] transition">Blog</a>
-        </div>
+       <div className="flex flex-col gap-3 text-white/80">
+  <h4 className="text-lg font-semibold text-white">Navigasi</h4>
+  <Link href="/" className="hover:text-[#f22a98] transition">Home</Link>
+  <Link href="/#pricing" className="hover:text-[#f22a98] transition">Layanan</Link>
+  <Link href="/#testimonials" className="hover:text-[#f22a98] transition">Project</Link>
+  <Link href="/#blog" className="hover:text-[#f22a98] transition">Blog</Link>
+</div>
 
         {/* Kontak & Sosial */}
         <div className="flex flex-col gap-3 text-white/80">
@@ -39,33 +39,33 @@ export default function Footer() {
 
           <div className="flex items-center gap-3">
             <FaEnvelope className="text-xl" />
-            <a href="mailto:crewtivdesign@gmail.com" className="hover:text-[#f22a98] transition">
+            <Link href="mailto:crewtivdesign@gmail.com" className="hover:text-[#f22a98] transition">
               crewtivdesign@gmail.com
-            </a>
+            </Link>
           </div>
 
           <div className="flex items-center gap-3">
             <FaInstagram className="text-xl" />
-            <a
+            <Link
               href="https://instagram.com/crewtiv"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#f22a98] transition"
             >
               @crewtiv
-            </a>
+            </Link>
           </div>
 
           <div className="flex items-center gap-3">
             <FaWhatsapp className="text-xl" />
-            <a
+            <Link
               href="https://wa.me/6287793942392"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#f22a98] transition"
             >
               +62 877-9394-2392
-            </a>
+            </Link>
           </div>
         </div>
       </div>

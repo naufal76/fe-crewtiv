@@ -4,7 +4,6 @@ import { About } from "@/components/About";
 import Cobahero from "@/components/cobahero";
 import { Description } from "@/components/description";
 import Footer from "@/components/footer";
-import Hero from "@/components/Hero";
 import OurClint from "@/components/OurClient";
 import { Project } from "@/components/Project";
 import RecentBlog from "@/components/recent-blog";

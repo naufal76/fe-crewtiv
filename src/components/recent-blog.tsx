@@ -8,37 +8,37 @@ const blogPosts = [
     id: 1,
     title: '8 Creative Ways to Repurpose Your Webinar Content',
     category: 'Inspiration',
-    image: '/blogs/blog1.jpg',
+    image: '/blogs/apple.jpg',
   },
   {
     id: 2,
     title: 'Why Webinars Are the #1 Lead Generation Marketing Strategy',
     category: 'Inspiration',
-    image: '/blogs/blog2.jpg',
+    image: '/blogs/bisnis.png',
   },
   {
     id: 3,
     title: 'How to Drive Qualified Pipeline After Your Webinar',
     category: 'Inspiration',
-    image: '/blogs/blog3.jpg',
+    image: '/blogs/chart.png',
   },
   {
     id: 4,
     title: '5 Webinar Promotion Tips You Should Know',
     category: 'Marketing',
-    image: '/blogs/blog4.jpg',
+    image: '/blogs/karakter.png',
   },
   {
     id: 5,
     title: 'How to Create High-Conversion Webinar Funnels',
     category: 'Strategy',
-    image: '/blogs/blog5.jpg',
+    image: '/blogs/landing-page.png',
   },
   {
     id: 6,
     title: 'Best Webinar Tools for 2025 You Should Try',
     category: 'Tools',
-    image: '/blogs/blog6.jpg',
+    image: '/blogs/logo.jpg',
   },
 ]
 
