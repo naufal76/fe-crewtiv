@@ -70,10 +70,12 @@ const packages = [
 
 export default function WebPrice() {
   return (
-    <section className="bg-black text-white py-20 px-4">
-      <h2 className="text-center text-[#f22a98] text-8xl font-bold mb-16">Website Price List</h2>
-
-      <div className="flex flex-col justify-center items-center lg:flex-row lg:justify-center gap-10 max-w-7xl mx-auto">
+    <section className="bg-black text-white py-20 px-4 flex flex-col items-center justify-center text-center">
+      <h2 className="text-center text-[#f22a98] text-8xl font-bold mb-5">Website Price List</h2>
+       <p className="text-center max-w-6xl  text-lg text-white/80 leading-relaxed mb-16">
+                       Pilih paket yang sesuai dengan kebutuhan dan anggaran kamu. Kami menyediakan layanan lengkap, dari domain, hosting, desain responsif, hingga optimasi SEO.
+                   </p>
+      <div className="flex flex-col justify-center items-center lg:flex-row lg:justify-center gap-10 min-w-md sm:min-w-6xl mx-auto">
         {packages.map((pkg, idx) => (
           <div
             key={idx}

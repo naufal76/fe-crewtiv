@@ -1,6 +1,13 @@
 'use client'
 
+import { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 import Footer from '@/components/footer'
+import HowToLogo from '@/components/how-to-logo'
+import ImportantLogo from '@/components/important-logo'
+import InfographicLogo from '@/components/infografik-logo'
 
 const packages = [
   {
@@ -29,52 +36,92 @@ const packages = [
       'Format PNG, JPG & PDF',
       'Mockup Presentasi',
       'Brief via WhatsApp / Google Form',
-      'File Source (AI/CDR)',
+      'File Source (AI)',
     ],
     unavailable: [],
   },
   {
     name: 'Business Identity',
     priceOriginal: 'Rp.2.800.000',
-    priceDiscounted: 'Rp.1.980.000',
+    priceDiscounted: 'Rp.1.580.000',
     features: [
       '3 Konsep Logo',
       'Unlimited Revisi',
       'Waktu pengerjaan 7-10 hari',
-      'Format Lengkap (PNG, JPG, PDF, SVG)',
+      'Format (PNG, JPG, PDF, SVG)',
       'Mockup Presentasi',
       'Brief via Zoom / WhatsApp',
-      'File Source Lengkap (AI/CDR/PSD)',
+      'File Source Lengkap (AI/PSD)',
     ],
     unavailable: [],
   },
 ]
 
 export default function LogoDesignPage() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true })
+  }, [])
+
   return (
     <div className="relative bg-[url('/hero-bg.png')] bg-cover bg-center bg-black text-white">
       <div>
-        <section className="min-h-[70vh] h-screen flex items-center justify-center text-center px-4">
+        {/* HERO */}
+        <section
+          className="min-h-[70vh] h-screen flex flex-col justify-center text-center px-4"
+          data-aos="fade-up"
+        >
           <div>
-            <h1 className="text-4xl sm:text-9xl font-bold text-[#f22a98] mb-6">
-              Logo <br/> Design
+            <h1 className="text-7xl sm:text-9xl font-bold text-[#f22a98] mb-6">
+              Logo <br /> Design
             </h1>
-            <p className="text-white/80 text-lg max-w-2xl mx-auto">
+            <p className="text-white/80 text-lg max-w-2xl mx-auto mb-10">
               Bangun identitas visual brand kamu mulai dari logo yang kuat, berkesan, dan profesional. Cocok untuk UMKM, startup, maupun brand yang ingin rebranding.
             </p>
+
+            {/* USP CARDS */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {[
+                {
+                  title: 'Desain Unik & Berkarakter',
+                  desc: 'Setiap logo dibuat dari riset dan konsep, bukan template.',
+                },
+                {
+                  title: 'Revisi Sampai Puas',
+                  desc: 'Kamu bisa revisi desain agar benar-benar sesuai keinginan.',
+                },
+                {
+                  title: 'File Lengkap & Siap Pakai',
+                  desc: 'Kamu akan mendapat file logo dalam berbagai format siap cetak & digital.',
+                },
+              ].map((item, idx) => (
+                <div
+                  key={idx}
+                  className="group bg-white/5 p-6 rounded-xl border border-white/10 shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-[0_0_10px_#f22a98]"
+                  data-aos="zoom-in"
+                  data-aos-delay={idx * 150}
+                >
+                  <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                  <p className="text-white/70 text-sm">{item.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
-        <section className="text-center max-w-6xl mx-auto px-6 py-10 mb-9">
-          <h2 className="text-center text-[#f22a98] text-6xl font-bold mb-10">Price List</h2>
+        {/* PRICE LIST */}
+        <section className="text-center max-w-6xl mx-auto px-6 py-10 mb-9" data-aos="fade-up">
+          <h2 className="text-[#f22a98] text-6xl font-bold mb-10">Price List</h2>
           <p className="text-lg text-white/80 leading-relaxed mb-16">
             Kami menyediakan layanan desain logo sesuai kebutuhanmu. Mulai dari yang simpel hingga paket lengkap identitas brand.
           </p>
+
           <div className="flex flex-col justify-center items-center lg:flex-row lg:justify-center gap-10 max-w-7xl mx-auto">
             {packages.map((pkg, idx) => (
               <div
                 key={idx}
                 className="rounded-2xl p-8 bg-black shadow-[0_0_10px_#f22a98] hover:shadow-[0_0_30px_#f22a98] transition duration-300 flex flex-col items-center w-full max-w-sm"
+                data-aos="fade-up"
+                data-aos-delay={idx * 150}
               >
                 <h3 className="text-3xl font-bold mb-2">{pkg.name}</h3>
                 <p className="text-lg text-gray-300 line-through">{pkg.priceOriginal}</p>
@@ -86,11 +133,7 @@ export default function LogoDesignPage() {
                   {pkg.features.map((feat, i) => (
                     <li
                       key={i}
-                      className={
-                        pkg.unavailable.includes(i)
-                          ? 'text-gray-500 line-through'
-                          : 'text-white'
-                      }
+                      className={pkg.unavailable.includes(i) ? 'text-gray-500 line-through' : 'text-white'}
                     >
                       {feat}
                     </li>
@@ -105,11 +148,17 @@ export default function LogoDesignPage() {
           </div>
         </section>
 
-        <section className="py-20 text-center px-6">
-          <h3 className="text-3xl sm:text-4xl font-bold text-[#f22a98] mb-6">
+        {/* COMPONENT SECTIONS */}
+        <div data-aos="fade-left" data-aos-delay="300"><HowToLogo /></div>
+        <div data-aos="fade-right" data-aos-delay="300"><InfographicLogo /></div>
+        <div data-aos="fade-left" data-aos-delay="300"><ImportantLogo /></div>
+
+        {/* CTA */}
+        <section className="py-20 text-center mb-30 px-6" data-aos="fade-right" data-aos-delay="300">
+          <h3 className="text-5xl sm:text-6xl font-bold text-[#f22a98] mb-6">
             Siap Bangun Logo Kerenmu?
           </h3>
-          <p className="text-white/80 mb-6 max-w-xl mx-auto">
+          <p className="text-white/80 text-lg mb-6 max-w-xl mx-auto">
             Konsultasikan kebutuhan desain logomu dengan tim Crewtiv dan wujudkan logo profesional yang mewakili brand kamu secara maksimal.
           </p>
           <a
@@ -122,9 +171,8 @@ export default function LogoDesignPage() {
           </a>
         </section>
       </div>
-      <div>
-        <Footer />
-      </div>
+
+      <Footer />
     </div>
   )
 }
