@@ -1,7 +1,6 @@
 
 
 import { About } from "@/components/About";
-import Cobahero from "@/components/cobahero";
 import { Description } from "@/components/description";
 import Footer from "@/components/footer";
 import OurClint from "@/components/OurClient";
@@ -11,12 +10,13 @@ import Reviews from "@/components/reviews";
 import { Services } from "@/components/services";
 import WebPrice from "@/components/web-price";
 import AnimatedSection from "@/components/AnimatedSection";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
     <div className="bg-black">
       <main>
-        <AnimatedSection><Cobahero/></AnimatedSection>
+        <AnimatedSection> <Hero/> </AnimatedSection>
         <AnimatedSection><OurClint/></AnimatedSection>
         <AnimatedSection><About/></AnimatedSection>
         <AnimatedSection><Project/></AnimatedSection>

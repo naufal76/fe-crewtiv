@@ -9,7 +9,7 @@ const packages = [
     priceDiscounted: 'Rp.980.000',
     features: [
       'Domain .com',
-      'Hosting 2 G',
+      'Hosting by Vercel',
       '5 Menu',
       '1 Halaman',
       'Desain Tema Standar',
@@ -22,7 +22,7 @@ const packages = [
       'Backup Data Tahunan',
       'Bisa Upload/Edit Data',
     ],
-    unavailable: [11, 12], // index fitur yang tidak tersedia
+    unavailable: [10, 11, 12], // index fitur yang tidak tersedia
   },
   {
     name: 'Professional',
