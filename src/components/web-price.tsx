@@ -9,7 +9,7 @@ const packages = [
     priceDiscounted: 'Rp.980.000',
     features: [
       'Domain .com',
-      'Hosting 2 G',
+      'Hosting by Vercel',
       '5 Menu',
       '1 Halaman',
       'Desain Tema Standar',
