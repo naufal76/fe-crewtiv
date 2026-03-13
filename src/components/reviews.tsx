@@ -38,10 +38,10 @@ export default function Reviews() {
   }, [itemsPerSlide])
 
   return (
-    <section className="bg-black text-white py-20 px-6 overflow-hidden">
+    <section className="bg-white text-white py-20 px-6 overflow-hidden">
       <div className="text-center mb-14">
         <h2 className="text-5xl sm:text-7xl font-bold text-[#f22a98]">Kata Orang</h2>
-        <p className="text-xl mt-4 text-white/80">Ini yang orang bilang tentang Crewtiv Media</p>
+        <p className="text-xl mt-4 text-black/80">Ini yang orang bilang tentang Crewtiv Media</p>
       </div>
 
       <div className="relative max-w-7xl mx-auto overflow-hidden">

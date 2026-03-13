@@ -11,8 +11,8 @@ const services = [
       'Pengembangan situs web yang disesuaikan untuk meningkatkan citra brand dan mengoptimalkan pengalaman pengguna.'
   },
   {
-    title: 'Logo Design',
-    slug: 'logo-design',
+    title: 'Graphic Design',
+    slug: 'graphic-design',
     description:
       'Desain logo kreatif dengan pendekatan terpadu untuk memperkuat identitas digital.'
   },

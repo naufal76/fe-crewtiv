@@ -1,13 +1,28 @@
 'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState, useRef, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
   const servicesRef = useRef<HTMLDivElement>(null)
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -18,49 +33,119 @@ export default function Navbar() {
         setServicesOpen(false)
       }
     }
+
     document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
   }, [])
 
   return (
-    <nav className="bg-black shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-around h-16 items-center">
+    <nav
+      className={`fixed w-screen px-4 sm:px-6 lg:px-8 top-0 z-50 transition-all duration-300 ${
+        scrolled ? 'bg-black shadow-md' : 'bg-transparent'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto">
+
+        <div className="flex justify-between items-center h-16">
+
+          {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <Image src="/logo.png" alt="Logo Perusahaan" width={32} height={32} />
+            <Image src="/logo.png" alt="Crewtiv Logo" width={32} height={32} />
             <span className="text-xl font-bold text-[#f22a98]">Crewtiv</span>
           </Link>
 
-       
-          <div className="hidden md:flex items-center space-x-6">
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-8">
+
             <NavItem href="/">Home</NavItem>
-            <NavItem href="/website-development">Website Development</NavItem>
-            <NavItem href="/social-media">Social Media Management</NavItem>
-            <NavItem href="/logo-design">Logo Design</NavItem>
+
+            {/* Dropdown */}
+            <div className="relative" ref={servicesRef}>
+
+              <button
+                onClick={() => setServicesOpen(!servicesOpen)}
+                className="text-gray-100 hover:text-[#f22a98] transition"
+              >
+                Layanan
+              </button>
+
+              {servicesOpen && (
+                <div className="absolute top-10 left-0 bg-black shadow-lg rounded-lg py-2 w-56">
+
+                  <DropdownItem
+                    href="/website-development"
+                    close={() => setServicesOpen(false)}
+                  >
+                    Website Development
+                  </DropdownItem>
+
+                  <DropdownItem
+                    href="/social-media"
+                    close={() => setServicesOpen(false)}
+                  >
+                    Social Media Management
+                  </DropdownItem>
+
+                  <DropdownItem
+                    href="/graphic-design"
+                    close={() => setServicesOpen(false)}
+                  >
+                    Graphic Design
+                  </DropdownItem>
+
+                </div>
+              )}
+
+            </div>
+
             <NavItem href="/project-page">Project</NavItem>
+
+            <NavItem href="/contact">Contact</NavItem>
+
           </div>
 
-        
+          {/* Mobile Button */}
           <div className="md:hidden">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="text-gray-100 focus:outline-none"
+              className="text-white text-2xl"
             >
               ☰
             </button>
           </div>
+
         </div>
 
-        {/* hp */}
+        {/* Mobile Menu */}
         {menuOpen && (
-          <div className="md:hidden mt-2 space-y-2">
+          <div className="md:hidden bg-black pb-4 space-y-2">
+
             <NavItem href="/">Home</NavItem>
-            <NavItem href="/website-development">Website Development</NavItem>
-            <NavItem href="/social-media">Social Media Management</NavItem>
-            <NavItem href="/logo-design">Logo Design</NavItem>
+
+            <p className="px-3 pt-2 text-gray-400 text-sm">Layanan</p>
+
+            <DropdownItem href="/website-development">
+              Website Development
+            </DropdownItem>
+
+            <DropdownItem href="/social-media">
+              Social Media Management
+            </DropdownItem>
+
+            <DropdownItem href="/graphic-design">
+              Desain Grafis
+            </DropdownItem>
+
             <NavItem href="/project-page">Project</NavItem>
+
+            <NavItem href="/contact">Contact</NavItem>
+
           </div>
         )}
+
       </div>
     </nav>
   )
@@ -70,7 +155,27 @@ function NavItem({ href, children }: { href: string; children: React.ReactNode }
   return (
     <Link
       href={href}
-      className="block px-3 py-2 text-gray-100 hover:text-[#f22a98] font-medium transition-colors"
+      className="block px-3 py-2 text-gray-100 hover:text-[#f22a98] font-medium transition"
+    >
+      {children}
+    </Link>
+  )
+}
+
+function DropdownItem({
+  href,
+  children,
+  close,
+}: {
+  href: string
+  children: React.ReactNode
+  close?: () => void
+}) {
+  return (
+    <Link
+      href={href}
+      onClick={close}
+      className="block px-4 py-2 text-gray-200 hover:bg-[#f22a98] hover:text-white transition"
     >
       {children}
     </Link>
