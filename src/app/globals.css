@@ -24,3 +24,23 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes scrollFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .scroll-fade-up {
+    animation: scrollFadeUp linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+}
+
