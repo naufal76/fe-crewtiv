@@ -86,10 +86,10 @@ export default function WebDevPage() {
   }, [])
 
   return (
-    <main className="bg-black text-white">
+    <main className="bg-[url('/hero-bg.png')] bg-cover bg-center bg-black text-white pt-30 lg:pt-10">
 
       {/* HERO */}
-      <div className="mx-auto px-6 py-10 lg:px-14 flex flex-col-reverse md:flex-row items-center gap-10 max-w-7xl">
+      <div className="mx-auto h-screen px-6 py-10 lg:px-14 flex flex-col-reverse md:flex-row items-center gap-10 max-w-7xl">
 
         {/* TEXT */}
         <motion.section
@@ -111,10 +111,16 @@ export default function WebDevPage() {
               bangun responsif, cepat, SEO friendly, dan siap membantu bisnis Anda
               berkembang di era digital.
             </p>
-
-            <button className="mt-8 px-6 py-3 rounded-full text-white font-semibold bg-[#f22a98] hover:bg-white hover:text-[#f22a98] transition duration-300 shadow-lg">
+            <a href="https://wa.me/6287793942392?text=Halo%20kak,%20saya%20ingin%20konsultasi%20pembuatan%20website"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block ">
+                <button className="mt-8 px-6 py-3 rounded-full text-white font-semibold bg-[#f22a98] hover:bg-white hover:text-[#f22a98] transition duration-300 shadow-lg">
               Konsultasi Sekarang
             </button>
+              </a>
+             
+            
           </div>
         </motion.section>
 
@@ -137,7 +143,7 @@ export default function WebDevPage() {
       </div>
 
       {/* ABOUT */}
-      <section className="max-w-6xl mx-auto px-6 py-20 text-center">
+      <section className="max-w-6xl mx-auto mt-20 px-6 py-20 text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-[#f22a98] mb-6">
           Kenapa Bisnis Membutuhkan Website?
         </h2>
@@ -152,7 +158,7 @@ export default function WebDevPage() {
       </section>
 
       {/* PRICE LIST */}
-      <section className="text-center max-w-7xl mx-auto px-6 py-10">
+      <section className="text-center mt-30 max-w-7xl mx-auto px-6 py-10">
         <h2 className="text-[#f22a98] text-4xl md:text-5xl font-bold mb-8">
           Website Price List
         </h2>
@@ -206,35 +212,35 @@ export default function WebDevPage() {
       </section>
 
       {/* PROCESS */}
-      <section className="max-w-6xl mx-auto mt-10 px-6 py-20 text-center">
+      <section className="max-w-6xl mx-auto mt-10 px-6 py-50 text-center">
         <h2 className="text-4xl font-bold text-[#f22a98] mb-10">
           Proses Pembuatan Website
         </h2>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
 
-          <div className="bg-black/90 py-10 px-5 rounded-2xl hover:shadow-[0_0_30px_#f22a98] transition">
+          <div className="bg-white/5 py-10 px-5 rounded-2xl hover:shadow-[0_0_30px_#f22a98] transition">
             <h3 className="font-semibold text-xl mb-2">1. Konsultasi</h3>
             <p className="text-white/70 text-sm">
               Kami memahami kebutuhan bisnis Anda dan menentukan konsep website yang tepat.
             </p>
           </div>
 
-          <div className="bg-black/90 py-10 px-5 rounded-2xl hover:shadow-[0_0_30px_#f22a98] transition">
+          <div className="bg-white/5 py-10 px-5 rounded-2xl hover:shadow-[0_0_30px_#f22a98] transition">
             <h3 className="font-semibold text-xl mb-2">2. Desain</h3>
             <p className="text-white/70 text-sm">
               Tim kami membuat desain website modern yang sesuai dengan brand Anda.
             </p>
           </div>
 
-          <div className="bg-black/90 py-10 px-5 rounded-2xl hover:shadow-[0_0_30px_#f22a98] transition">
+          <div className="bg-white/5 py-10 px-5 rounded-2xl hover:shadow-[0_0_30px_#f22a98] transition">
             <h3 className="font-semibold text-xl mb-2">3. Development</h3>
             <p className="text-white/70 text-sm">
               Website dikembangkan dengan teknologi modern agar cepat dan stabil.
             </p>
           </div>
 
-          <div className="bg-black/90 py-10 px-5 rounded-2xl hover:shadow-[0_0_30px_#f22a98] transition">
+          <div className="bg-white/5 py-10 px-5 rounded-2xl hover:shadow-[0_0_30px_#f22a98] transition">
             <h3 className="font-semibold text-xl mb-2">4. Launch</h3>
             <p className="text-white/70 text-sm">
               Website siap digunakan dan dapat langsung ditemukan di Google.
@@ -242,7 +248,83 @@ export default function WebDevPage() {
           </div>
 
         </div>
+        <a
+          href="https://wa.me/6287793942392?text=Halo%20kak,%20saya%20ingin%20konsultasi%20layanan%20website%20development"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-20 inline-block bg-[#f22a98] text-white px-6 py-3 rounded-full hover:bg-white hover:text-[#f22a98] border border-[#f22a98] transition"
+          >
+          Konsultasi Gratis
+          </a>
       </section>
+      
+
+      <div className='bg-white'>
+        <section className="max-w-4xl mx-auto px-6 py-20 pt-40">
+          <h2 className="text-4xl font-bold text-[#f22a98] text-center mb-10">
+            FAQ Jasa Pembuatan Website
+          </h2>
+
+          <div className="space-y-6">
+
+            <div>
+              <h3 className="font-semibold text-black text-lg">
+                Berapa lama proses pembuatan website?
+              </h3>
+              <p className="text-black/70 text-sm">
+                Proses pembuatan website biasanya membutuhkan waktu sekitar
+                3–14 hari tergantung kompleksitas desain, jumlah halaman,
+                serta fitur yang dibutuhkan pada website tersebut.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-black text-lg">
+                Apakah website bisa diakses melalui smartphone?
+              </h3>
+              <p className="text-black/70 text-sm">
+                Ya, semua website yang kami buat sudah menggunakan desain
+                responsif sehingga dapat diakses dengan baik melalui
+                smartphone, tablet, maupun desktop.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-black text-lg">
+                Apakah website bisa muncul di Google?
+              </h3>
+              <p className="text-black/70 text-sm">
+                Website akan dioptimasi menggunakan teknik SEO dasar agar
+                lebih mudah ditemukan di mesin pencari seperti Google dan
+                memiliki peluang lebih besar untuk muncul di hasil pencarian.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-black text-lg">
+                Apakah saya bisa mengedit konten website sendiri?
+              </h3>
+              <p className="text-black/70 text-sm">
+                Ya. Website yang kami buat menyediakan akses dashboard admin
+                sehingga Anda dapat mengubah teks, gambar, atau menambahkan
+                konten baru secara mandiri.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold text-black text-lg">
+                Apakah tersedia maintenance setelah website selesai?
+              </h3>
+              <p className="text-black/70 text-sm">
+                Kami menyediakan layanan maintenance sesuai paket yang dipilih
+                untuk memastikan website tetap berjalan dengan baik dan aman
+                setelah proses pembuatan selesai.
+              </p>
+            </div>
+
+          </div>
+        </section>
+      </div>
 
       {/* CTA */}
       <div className="bg-white">
@@ -264,7 +346,7 @@ export default function WebDevPage() {
             </h3>
 
             <p className="text-black/80 mb-6 max-w-xl">
-              Konsultasikan kebutuhan website Anda sekarang juga.
+              Konsultasikan kebutuhan website Anda sekarang juga untuk mewujudkan platform digital yang tidak hanya menarik secara visual, tetapi juga fungsional, responsif, dan mampu meningkatkan kepercayaan serta interaksi dengan audiens Anda.
             </p>
 
             <a

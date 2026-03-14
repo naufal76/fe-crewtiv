@@ -80,7 +80,7 @@ export default function DesignPage() {
 <main className="bg-[url('/hero-bg.png')] bg-cover bg-center bg-black text-white pt-30 lg:pt-10">
 
 {/* HERO */}
-<div className="mx-auto h-screen px-6 py-10 lg:px-14 flex flex-col-reverse md:flex-row items-center gap-10 max-w-7xl">
+<div className="mx-auto h-screen px-6 py-10 lg:px-10 flex flex-col-reverse md:flex-row items-center gap-10 max-w-7xl">
 
 <motion.section
 initial="hidden"
@@ -94,18 +94,18 @@ className="flex items-center"
 <div className="max-w-xl">
 
 <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold text-[#f22a98] mb-6 leading-tight">
-Logo <br /> Design
+Graphic <br /> Design
 </h1>
 
 <p className="text-white/80 text-lg">
-Crewtiv menyediakan layanan <strong>jasa desain logo profesional</strong>
-untuk UMKM, startup, hingga perusahaan. Logo yang kami buat dirancang
+Crewtiv menyediakan layanan <strong>jasa desain grafis profesional </strong>
+untuk UMKM, startup, hingga perusahaan. Desain yang kami buat dirancang
 unik, mudah diingat, dan mampu merepresentasikan identitas brand Anda
 secara kuat dan profesional.
 </p>
 
 <a
-href="https://wa.me/6287793942392?text=Halo%20kak,%20saya%20ingin%20konsultasi%20desain%20logo"
+href="https://wa.me/6287793942392?text=Halo%20kak,%20saya%20ingin%20konsultasi%20desain%20grafis"
 target="_blank"
 rel="noopener noreferrer"
 className="mt-8 inline-block px-6 py-3 rounded-full text-white font-semibold bg-[#f22a98] hover:bg-white hover:text-[#f22a98] transition duration-300 shadow-lg"
@@ -134,25 +134,100 @@ className="w-full max-w-md md:max-w-xl h-auto object-contain"
 
 </div>
 </div>
+{/* GRAPHIC DESIGN SERVICES */}
+<section className="max-w-6xl mx-auto mt-10 px-6 py-40 text-center">
 
+<h2 className="text-4xl md:text-5xl font-bold text-[#f22a98] mb-10">
+Layanan Desain Grafis
+</h2>
+
+<p className="text-white/80 leading-relaxed max-w-4xl mx-auto mb-14">
+Crewtiv menyediakan berbagai layanan desain grafis untuk membantu
+membangun identitas visual brand Anda. Mulai dari pembuatan logo,
+materi promosi, hingga kebutuhan desain untuk bisnis dan merchandise.
+</p>
+
+<div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+
+{/* Brand Identity */}
+<div className="bg-white/5 py-10 px-6 rounded-2xl hover:shadow-[0_0_30px_#f22a98] transition">
+<h3 className="font-semibold text-xl mb-4 text-[#f22a98]">
+Brand Identity
+</h3>
+
+<ul className="space-y-2 text-white/80 text-sm">
+<li>Logo Design</li>
+<li>Brand Guidelines</li>
+<li>Visual Identity System</li>
+<li>Color & Typography Setup</li>
+</ul>
+</div>
+
+{/* Marketing Materials */}
+<div className="bg-white/5 py-10 px-6 rounded-2xl hover:shadow-[0_0_30px_#f22a98] transition">
+<h3 className="font-semibold text-xl mb-4 text-[#f22a98]">
+Marketing Materials
+</h3>
+
+<ul className="space-y-2 text-white/80 text-sm">
+<li>Flyer Design</li>
+<li>Poster & Pamphlet</li>
+<li>Banner & Billboard</li>
+<li>Social Media Content</li>
+</ul>
+</div>
+
+{/* Business Documents */}
+<div className="bg-white/5 py-10 px-6 rounded-2xl hover:shadow-[0_0_30px_#f22a98] transition">
+<h3 className="font-semibold text-xl mb-4 text-[#f22a98]">
+Business Documents
+</h3>
+
+<ul className="space-y-2 text-white/80 text-sm">
+<li>Company Profile</li>
+<li>Catalogue Design</li>
+<li>Presentation Slides</li>
+<li>Proposal & Pitch Deck</li>
+</ul>
+</div>
+
+{/* Merchandise */}
+<div className="bg-white/5 py-10 px-6 rounded-2xl hover:shadow-[0_0_30px_#f22a98] transition">
+<h3 className="font-semibold text-xl mb-4 text-[#f22a98]">
+Merchandise Design
+</h3>
+
+<ul className="space-y-2 text-white/80 text-sm">
+<li>T-Shirt Design</li>
+<li>Totebag & Slingbag</li>
+<li>Sticker & Packaging</li>
+<li>Brand Merchandise</li>
+</ul>
+</div>
+
+</div>
+<a
+href="https://wa.me/6287793942392?text=Halo%20kak,%20saya%20ingin%20konsultasi%20layanan%20desain%20grafis"
+target="_blank"
+rel="noopener noreferrer"
+className="mt-20 inline-block bg-[#f22a98] text-white px-6 py-3 rounded-full hover:bg-white hover:text-[#f22a98] border border-[#f22a98] transition"
+>
+Konsultasi Gratis
+</a>
+</section>
 {/* ABOUT */}
 <section className="max-w-6xl mx-auto mt-20 px-6 py-20 text-center">
 
 <h2 className="text-4xl md:text-5xl font-bold text-[#f22a98] mb-6">
-Kenapa Logo Penting untuk Brand?
+Mengapa desain grafis menjadi kebutuhan penting bagi brand kamu?
 </h2>
 
 <p className="text-white/80 leading-relaxed max-w-3xl mx-auto">
-Logo adalah wajah dari sebuah brand. Logo yang kuat akan membantu
-bisnis Anda lebih mudah dikenali, terlihat profesional, dan
-meningkatkan kepercayaan pelanggan terhadap produk atau layanan yang
-Anda tawarkan.
+Desain grafis adalah fondasi utama dalam membangun identitas brand yang kuat. Lebih dari sekadar tampilan visual, desain grafis membantu menyampaikan pesan, nilai, dan karakter bisnis kamu dengan cara yang konsisten dan mudah dikenali. Mulai dari logo, tipografi, palet warna, hingga konten media sosial, setiap elemen visual bekerja bersama untuk menciptakan kesan profesional yang meningkatkan kepercayaan audiens terhadap brand kamu.
 </p>
 
 <p className="text-white/80 leading-relaxed max-w-3xl mx-auto mt-4">
-Dengan desain logo yang tepat, brand Anda dapat membangun identitas
-visual yang konsisten di berbagai media seperti website, social media,
-kemasan produk, hingga materi promosi lainnya.
+Dengan desain grafis yang tepat, brand kamu tidak hanya tampil menarik, tetapi juga mampu membedakan diri dari kompetitor dan membangun hubungan emosional dengan pelanggan. Visual yang dirancang secara strategis akan membuat pesan lebih mudah diingat, meningkatkan engagement, serta memperkuat citra brand di berbagai platform digital maupun offline. Inilah alasan mengapa investasi pada desain grafis adalah langkah penting untuk pertumbuhan bisnis yang berkelanjutan.
 </p>
 
 </section>
@@ -201,7 +276,7 @@ pkg.unavailable.includes(i)
 </ul>
 
 <a
-href={`https://wa.me/6287793942392?text=Halo%20saya%20ingin%20desain%20logo%20paket%20${pkg.name}`}
+href={`https://wa.me/6287793942392?text=Halo%20saya%20ingin%20desain%20grafis%20paket%20${pkg.name}`}
 target="_blank"
 rel="noopener noreferrer"
 >

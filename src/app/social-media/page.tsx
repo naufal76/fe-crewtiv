@@ -74,7 +74,7 @@ export default function SocialMediaPage() {
 
   return (
 
-<main className="bg-[url('/hero-bg.png')] bg-cover bg-center bg-black text-white pt-30 lg:pt-10">
+<main className="bg-[url('/hero-bg.png')] bg-cover bg-center bg-black text-white pt-3 lg:pt-5">
 
 {/* HERO */}
 <div className="mx-auto h-screen px-6 py-10 lg:px-14 flex flex-col-reverse md:flex-row items-center gap-10 max-w-7xl">
@@ -123,9 +123,9 @@ transition: 'transform 0.1s ease-out',
 <Image
 src="/social-media.png"
 alt="Social Media Management"
-width={800}
-height={800}
-className="w-full max-w-md md:max-w-xl h-auto object-contain"
+width={1000}
+height={1000}
+className="w-full max-w-xl md:max-w-4xl h-auto object-contain"
 />
 
 </div>
@@ -254,11 +254,84 @@ Konten dipublikasikan sesuai kalender konten yang telah dibuat.
 Kami menganalisis performa konten untuk meningkatkan hasil.
 </p>
 </div>
-
 </div>
-
+<a
+          href="https://wa.me/6287793942392?text=Halo%20kak,%20saya%20ingin%20konsultasi%20layanan%20social%20media%20management"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-20 inline-block bg-[#f22a98] text-white px-6 py-3 rounded-full hover:bg-white hover:text-[#f22a98] border border-[#f22a98] transition"
+          >
+          Konsultasi Gratis
+          </a>
 </section>
+  
+        <div className='bg-white'>
+          <section className="max-w-4xl mx-auto px-6 py-20 pt-40">
+            <h2 className="text-4xl font-bold text-[#f22a98] text-center mb-10">
+              FAQ Social Media Management
+            </h2>
 
+            <div className="space-y-6">
+
+              <div>
+                <h3 className="font-semibold text-black text-lg">
+                  Platform media sosial apa saja yang bisa dikelola?
+                </h3>
+                <p className="text-black/70 text-sm">
+                  Kami dapat membantu mengelola berbagai platform media sosial seperti
+                  Instagram, TikTok, Facebook, dan platform lainnya sesuai dengan
+                  kebutuhan bisnis atau personal branding Anda.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-black text-lg">
+                  Apakah saya perlu menyediakan konten sendiri?
+                </h3>
+                <p className="text-black/70 text-sm">
+                  Tidak selalu. Tim kami dapat membantu membuat desain konten,
+                  video reels, serta copywriting caption. Namun jika Anda sudah
+                  memiliki materi sendiri, kami juga dapat mengolahnya menjadi
+                  konten yang lebih menarik.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-black text-lg">
+                  Apakah termasuk strategi konten dan riset hashtag?
+                </h3>
+                <p className="text-black/70 text-sm">
+                  Ya, setiap paket sudah termasuk perencanaan konten, riset hashtag,
+                  serta kalender konten agar postingan lebih terarah dan memiliki
+                  peluang menjangkau audiens yang lebih luas.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-black text-lg">
+                  Apakah konten akan diposting oleh tim Crewtiv?
+                </h3>
+                <p className="text-black/70 text-sm">
+                  Tergantung paket yang dipilih. Beberapa paket sudah termasuk
+                  layanan penjadwalan dan upload konten oleh tim kami agar akun
+                  media sosial Anda tetap aktif secara konsisten.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-black text-lg">
+                  Apakah saya akan mendapatkan laporan performa?
+                </h3>
+                <p className="text-black/70 text-sm">
+                  Ya. Pada paket tertentu kami menyediakan laporan analisis performa
+                  konten setiap bulan sehingga Anda dapat melihat perkembangan akun
+                  media sosial secara lebih jelas.
+                </p>
+              </div>
+
+            </div>
+          </section>
+        </div>
 {/* CTA */}
 <div className="bg-white">
 
@@ -283,7 +356,7 @@ Siap Membuat Social Media Brandmu Lebih Aktif?
 </h3>
 
 <p className="text-black/80 mb-6 max-w-xl">
-Diskusikan strategi konten terbaik untuk bisnis Anda bersama tim Crewtiv.
+Diskusikan strategi konten terbaik untuk bisnis Anda bersama tim Crewtiv, dan temukan pendekatan kreatif yang mampu meningkatkan visibilitas brand, memperkuat komunikasi dengan audiens, serta menghadirkan hasil yang relevan dan berkelanjutan bagi perkembangan bisnis Anda.
 </p>
 
 <a

@@ -103,7 +103,14 @@ export default function Navbar() {
 
             <NavItem href="/project-page">Project</NavItem>
 
-            <NavItem href="/contact">Contact</NavItem>
+            <a
+                href="https://wa.me/6287793942392?text=Halo%20kak,%20saya%20ingin%20konsultasi%20layanan%20desain%20grafis"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#f22a98] text-white px-6 py-2 rounded-full hover:bg-white hover:text-[#f22a98] border border-[#f22a98] transition"
+                >
+                Contact
+                </a>
 
           </div>
 
