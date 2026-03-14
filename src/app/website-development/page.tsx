@@ -1,8 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Footer from '@/components/footer'
-<<<<<<< HEAD
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
@@ -77,13 +75,6 @@ const packages = [
     unavailable: [],
   },
 ]
-=======
-import HowToWebsite from '@/components/how-to-web'
-import ImportantWebsite from '@/components/important-web'
-import InfographicWeb from '@/components/infografik-web'
-import WebPrice from '@/components/web-price'
-import { fadeUp, containerStagger } from '../../../lib/variants'
->>>>>>> dbf4a72b09bcb536f92e48111dfc6e42b624a4a9
 
 export default function WebDevPage() {
   const [offsetY, setOffsetY] = useState(0)
@@ -95,11 +86,10 @@ export default function WebDevPage() {
   }, [])
 
   return (
-<<<<<<< HEAD
-    <main className="bg-[url('/hero-bg.png')] bg-cover bg-center bg-black text-white pt-30 lg:pt-10">
+    <main className="bg-black text-white">
 
       {/* HERO */}
-      <div className="mx-auto h-screen px-6 py-10 lg:px-14 flex flex-col-reverse md:flex-row items-center gap-10 max-w-7xl">
+      <div className="mx-auto px-6 py-10 lg:px-14 flex flex-col-reverse md:flex-row items-center gap-10 max-w-7xl">
 
         {/* TEXT */}
         <motion.section
@@ -147,7 +137,7 @@ export default function WebDevPage() {
       </div>
 
       {/* ABOUT */}
-      <section className="max-w-6xl mx-auto mt-20 px-6 py-20 text-center">
+      <section className="max-w-6xl mx-auto px-6 py-20 text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-[#f22a98] mb-6">
           Kenapa Bisnis Membutuhkan Website?
         </h2>
@@ -162,7 +152,7 @@ export default function WebDevPage() {
       </section>
 
       {/* PRICE LIST */}
-      <section className="text-center mt-30 max-w-7xl mx-auto px-6 py-10">
+      <section className="text-center max-w-7xl mx-auto px-6 py-10">
         <h2 className="text-[#f22a98] text-4xl md:text-5xl font-bold mb-8">
           Website Price List
         </h2>
@@ -216,79 +206,43 @@ export default function WebDevPage() {
       </section>
 
       {/* PROCESS */}
-      <section className="max-w-6xl mx-auto mt-10 px-6 py-50 text-center">
+      <section className="max-w-6xl mx-auto mt-10 px-6 py-20 text-center">
         <h2 className="text-4xl font-bold text-[#f22a98] mb-10">
           Proses Pembuatan Website
         </h2>
-        <p className='text-white/80 leading-relaxed max-w-4xl mx-auto mb-10'>
-          Proses pembuatan website di Crewtiv dilakukan secara terstruktur mulai dari tahap konsultasi, desain, hingga pengembangan dan peluncuran website. Setiap tahap kami kerjakan dengan teliti agar website yang dihasilkan sesuai dengan kebutuhan bisnis Anda, memiliki tampilan profesional, serta performa yang optimal.
-        </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
 
-          <div className="bg-white/5 py-10 px-5 rounded-2xl hover:shadow-[0_0_30px_#f22a98] transition">
+          <div className="bg-black/90 py-10 px-5 rounded-2xl hover:shadow-[0_0_30px_#f22a98] transition">
             <h3 className="font-semibold text-xl mb-2">1. Konsultasi</h3>
             <p className="text-white/70 text-sm">
               Kami memahami kebutuhan bisnis Anda dan menentukan konsep website yang tepat.
             </p>
           </div>
 
-          <div className="bg-white/5 py-10 px-5 rounded-2xl hover:shadow-[0_0_30px_#f22a98] transition">
+          <div className="bg-black/90 py-10 px-5 rounded-2xl hover:shadow-[0_0_30px_#f22a98] transition">
             <h3 className="font-semibold text-xl mb-2">2. Desain</h3>
             <p className="text-white/70 text-sm">
               Tim kami membuat desain website modern yang sesuai dengan brand Anda.
             </p>
           </div>
 
-          <div className="bg-white/5 py-10 px-5 rounded-2xl hover:shadow-[0_0_30px_#f22a98] transition">
+          <div className="bg-black/90 py-10 px-5 rounded-2xl hover:shadow-[0_0_30px_#f22a98] transition">
             <h3 className="font-semibold text-xl mb-2">3. Development</h3>
             <p className="text-white/70 text-sm">
               Website dikembangkan dengan teknologi modern agar cepat dan stabil.
             </p>
           </div>
 
-          <div className="bg-white/5 py-10 px-5 rounded-2xl hover:shadow-[0_0_30px_#f22a98] transition">
+          <div className="bg-black/90 py-10 px-5 rounded-2xl hover:shadow-[0_0_30px_#f22a98] transition">
             <h3 className="font-semibold text-xl mb-2">4. Launch</h3>
             <p className="text-white/70 text-sm">
               Website siap digunakan dan dapat langsung ditemukan di Google.
             </p>
           </div>
-          
-        </div><a
-              href="https://wa.me/6287793942392?text=Halo%20kak,%20saya%20ingin%20konsultasi%20pembuatan%20website"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-20 inline-block bg-[#f22a98] text-white px-6 py-3 rounded-full hover:bg-white hover:text-[#f22a98] border border-[#f22a98] transition"
-            >
-              Konsultasi Gratis
-            </a>
-      </section>
 
-      {/* FAQ SEO BOOST */} 
-      <div className='bg-white'>
-        <section className="max-w-4xl mx-auto px-6 py-20 pt-40">
-          <h2 className="text-4xl font-bold text-[#f22a98] text-center mb-10"> FAQ Jasa Pembuatan Website </h2>
-          <div className="space-y-6">
-            <div>
-              <h3 className="font-semibold text-black text-lg"> Berapa lama proses pembuatan website? </h3>
-              <p className="text-black/70 text-sm"> 
-              Rata-rata pembuatan website membutuhkan waktu 3–14 hari tergantung kompleksitas dan jumlah halaman yang dibutuhkan. </p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-black text-lg"> Apakah website bisa diakses melalui HP? </h3>
-                <p className="text-black/70 text-sm">
-                Ya, semua website yang kami buat sudah responsif sehingga bisa diakses dengan baik melalui smartphone, tablet, maupun desktop. 
-                </p> 
-                </div> 
-                <div> 
-                  <h3 className="font-semibold text-black text-lg"> Apakah website bisa muncul di Google? </h3>
-                  <p className="text-black/70 text-sm">
-                  Kami mengoptimasi website dengan teknik SEO dasar agar lebih mudah ditemukan di mesin pencari seperti Google.
-                  </p>
-                </div>
-           </div>
-          </section>
         </div>
+      </section>
 
       {/* CTA */}
       <div className="bg-white">
@@ -310,7 +264,7 @@ export default function WebDevPage() {
             </h3>
 
             <p className="text-black/80 mb-6 max-w-xl">
-              Konsultasikan kebutuhan website Anda sekarang juga. Tim Crewtiv siap membantu membangun website profesional untuk bisnis Anda.
+              Konsultasikan kebutuhan website Anda sekarang juga.
             </p>
 
             <a
@@ -329,114 +283,5 @@ export default function WebDevPage() {
       <Footer />
 
     </main>
-=======
-    <div className="relative bg-[url('/hero-bg.png')] bg-cover bg-center bg-black text-white">
-      <div>
-        {/* Hero */}
-        <section className="min-h-[70vh] h-screen flex flex-col items-center justify-center text-center px-4">
-          <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            variants={fadeUp}
-          >
-            <h1 className="text-7xl sm:text-9xl font-bold text-[#f22a98] mb-6">
-              Website <br /> Development
-            </h1>
-            <p className="text-white/80 text-lg max-w-2xl mx-auto mb-10">
-              Layanan pembuatan website profesional, cepat, dan harga terjangkau. Cocok untuk UMKM, personal branding, atau bisnis yang ingin tampil online dengan optimal.
-            </p>
-          </motion.div>
-
-          {/* USP Cards */}
-          <motion.div
-            variants={containerStagger}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.3 }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
-          >
-            {[
-              {
-                title: 'Desain Responsif',
-                desc: 'Website tampil optimal di berbagai perangkat, dari desktop hingga smartphone.',
-              },
-              {
-                title: 'Optimasi SEO Dasar',
-                desc: 'Website dioptimalkan agar mudah ditemukan di Google dan mesin pencari lainnya.',
-              },
-              {
-                title: 'Mudah Dikelola',
-                desc: 'Dilengkapi dashboard admin untuk edit konten tanpa perlu coding.',
-              },
-            ].map((item, idx) => (
-              <motion.div
-                key={idx}
-                variants={fadeUp}
-                className="group bg-white/5 p-6 rounded-xl border border-white/10 shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-[0_0_10px_#f22a98]"
-              >
-                <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
-                <p className="text-white/70 text-sm">{item.desc}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </section>
-
-        {/* Price List */}
-        <motion.section
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={fadeUp}
-          className="text-center max-w-6xl mx-auto px-6 py-10 mb-9"
-        >
-          <WebPrice />
-        </motion.section>
-
-        {/* Other Sections */}
-        <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp}>
-          <HowToWebsite />
-        </motion.div>
-
-        <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp}>
-          <InfographicWeb />
-        </motion.div>
-
-        <motion.div initial="hidden" whileInView="show" viewport={{ once: true }} variants={fadeUp}>
-          <ImportantWebsite />
-        </motion.div>
-
-        {/* CTA Section */}
-        <motion.section
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
-          variants={fadeUp}
-          className="py-20 text-center px-6"
-        >
-          <h3 className="text-5xl sm:text-6xl font-bold text-[#f22a98] mb-6">
-            Siap Bangun Website Impianmu?
-          </h3>
-          <p className="text-white/80 mb-6 max-w-xl text-lg mx-auto">
-            Hubungi kami sekarang dan dapatkan website profesional dengan harga bersahabat. Karena kami percaya, hal keren gak harus mahal.
-          </p>
-          <a
-            href="https://wa.me/6287793942392"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-[#f22a98] text-white px-6 py-3 rounded-full hover:bg-white hover:text-[#f22a98] transition"
-          >
-            Konsultasi Gratis Sekarang
-          </a>
-        </motion.section>
-      </div>
-
-      <div>
-        <Footer />
-      </div>
-    </div>
->>>>>>> dbf4a72b09bcb536f92e48111dfc6e42b624a4a9
   )
 }
