@@ -1,18 +1,18 @@
-// utils/variants.ts
+import type { Variants } from 'framer-motion';
 
-export const fadeUp = {
+export const fadeUp: Variants = {
   hidden: { opacity: 0, y: 40 },
   show: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.6,
-      ease: 'easeOut',
+      ease: 'easeOut' as const,
     },
   },
 }
 
-export const containerStagger = {
+export const containerStagger: Variants = {
   hidden: {},
   show: {
     transition: {

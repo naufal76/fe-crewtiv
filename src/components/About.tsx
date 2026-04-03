@@ -1,6 +1,7 @@
-'use client'
-import Image from 'next/image'
-import React from 'react'
+"use client";
+
+import Image from "next/image";
+import React from "react";
 
 export const About = () => {
   return (
@@ -10,12 +11,15 @@ export const About = () => {
       </h1>
 
       <p className="max-w-3xl mx-auto text-xl text-gray-700 leading-relaxed">
-        Crewtiv Media adalah creative digital agency yang berfokus pada solusi digital menyeluruh dari pembuatan website hingga desain logo dan strategi social media management. Sejak didirikan pada tahun 2020, kami telah berkembang menjadi tim yang kreatif dan profesional.
-        Dengan keahlian dalam pengembangan website, desain logo yang menarik, dan strategi social media
-        management yang efektif, kami membantu brand Anda tampil menonjol, mudah dikenal, dan relevan di era digital.
+        Crewtiv Media adalah creative digital agency yang berfokus pada solusi
+        digital menyeluruh dari pembuatan website hingga desain logo dan
+        strategi social media management. Sejak didirikan pada tahun 2020, kami
+        telah berkembang menjadi tim yang kreatif dan profesional. Dengan
+        keahlian dalam pengembangan website, desain logo yang menarik, dan
+        strategi social media management yang efektif, kami membantu brand Anda
+        tampil menonjol, mudah dikenal, dan relevan di era digital.
       </p>
 
- 
       <div className="flex justify-center">
         <Image
           src="/about.png"
@@ -26,5 +30,5 @@ export const About = () => {
         />
       </div>
     </section>
-  )
-}
+  );
+};

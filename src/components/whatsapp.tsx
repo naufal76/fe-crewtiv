@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import { FaWhatsapp } from 'react-icons/fa'
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function WhatsAppButton() {
   return (
@@ -13,5 +13,5 @@ export default function WhatsAppButton() {
     >
       <FaWhatsapp size={30} />
     </a>
-  )
+  );
 }

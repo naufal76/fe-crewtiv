@@ -2,44 +2,21 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef } from 'react'
+import { useScroll } from '@/hooks/use-scroll'
+import { useOnClickOutside } from '@/hooks/use-click-outside'
+import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
+  const offsetY = useScroll()
+  const scrolled = offsetY > 50
 
   const servicesRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true)
-      } else {
-        setScrolled(false)
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        servicesRef.current &&
-        !servicesRef.current.contains(event.target as Node)
-      ) {
-        setServicesOpen(false)
-      }
-    }
-
-    document.addEventListener('mousedown', handleClickOutside)
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
-    }
-  }, [])
+  useOnClickOutside(servicesRef, () => setServicesOpen(false))
 
   return (
     <nav
@@ -101,7 +78,7 @@ export default function Navbar() {
 
             </div>
 
-            <NavItem href="/project-page">Project</NavItem>
+            <NavItem href="/projects">Project</NavItem>
 
             <a
                 href="https://wa.me/6287793942392?text=Halo%20kak,%20saya%20ingin%20konsultasi%20layanan%20desain%20grafis"
@@ -118,50 +95,81 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="text-white text-2xl"
+              className="text-white text-2xl p-2"
             >
-              ☰
+              {menuOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" /></svg>
+              )}
             </button>
           </div>
 
         </div>
 
         {/* Mobile Menu */}
-        {menuOpen && (
-          <div className="md:hidden bg-black pb-4 space-y-2">
+        <AnimatePresence>
+          {menuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="md:hidden bg-black pb-4 space-y-2 overflow-hidden"
+            >
+              <NavItem href="/" onClick={() => setMenuOpen(false)}>Home</NavItem>
 
-            <NavItem href="/">Home</NavItem>
+              {/* Layanan Accordion */}
+              <div>
+                <button
+                  onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                  className="w-full flex items-center justify-between px-3 py-2 text-gray-100 hover:text-[#f22a98] font-medium transition"
+                >
+                  <span>Layanan</span>
+                  <motion.svg
+                    animate={{ rotate: mobileServicesOpen ? 180 : 0 }}
+                    transition={{ duration: 0.25 }}
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </motion.svg>
+                </button>
 
-            <p className="px-3 pt-2 text-gray-400 text-sm">Layanan</p>
+                <AnimatePresence initial={false}>
+                  {mobileServicesOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.25 }}
+                      className="overflow-hidden pl-3 border-l-2 border-[#f22a98]/40 ml-3"
+                    >
+                      <DropdownItem href="/website-development" close={() => { setMenuOpen(false); setMobileServicesOpen(false) }}>Website Development</DropdownItem>
+                      <DropdownItem href="/social-media" close={() => { setMenuOpen(false); setMobileServicesOpen(false) }}>Social Media Management</DropdownItem>
+                      <DropdownItem href="/graphic-design" close={() => { setMenuOpen(false); setMobileServicesOpen(false) }}>Desain Grafis</DropdownItem>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
 
-            <DropdownItem href="/website-development">
-              Website Development
-            </DropdownItem>
-
-            <DropdownItem href="/social-media">
-              Social Media Management
-            </DropdownItem>
-
-            <DropdownItem href="/graphic-design">
-              Desain Grafis
-            </DropdownItem>
-
-            <NavItem href="/project-page">Project</NavItem>
-
-            <NavItem href="/contact">Contact</NavItem>
-
-          </div>
-        )}
+              <NavItem href="/projects" onClick={() => setMenuOpen(false)}>Project</NavItem>
+              <NavItem href="/contact" onClick={() => setMenuOpen(false)}>Contact</NavItem>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
       </div>
     </nav>
   )
 }
 
-function NavItem({ href, children }: { href: string; children: React.ReactNode }) {
+function NavItem({ href, children, onClick }: { href: string; children: React.ReactNode; onClick?: () => void }) {
   return (
     <Link
       href={href}
+      onClick={onClick}
       className="block px-3 py-2 text-gray-100 hover:text-[#f22a98] font-medium transition"
     >
       {children}

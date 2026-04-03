@@ -1,88 +1,29 @@
-'use client'
+"use client";
 
-import React from 'react'
-
-const packages = [
-  {
-    name: 'Starter',
-    priceOriginal: 'Rp.2.000.000',
-    priceDiscounted: 'Rp.980.000',
-    features: [
-      'Domain .com',
-      'Hosting by Vercel',
-      '5 Menu',
-      '1 Halaman',
-      'Desain Tema Standar',
-      'Perpanjang Rp.500.000',
-      'Optimasi SEO',
-      'Desain Responsif (Mobile)',
-      'Revisi 2x (Text/Gambar)',
-      'Maintenance Garansi 6 bulan',
-      'Akses Dashboard Admin',
-      'Backup Data Tahunan',
-      'Bisa Upload/Edit Data',
-    ],
-    unavailable: [10, 11, 12], // index fitur yang tidak tersedia
-  },
-  {
-    name: 'Professional',
-    priceOriginal: 'Rp.3.500.000',
-    priceDiscounted: 'Rp.1.980.000',
-    features: [
-      'Domain .com .id',
-      'Hosting 1 GB',
-      '6 Menu',
-      '4 Halaman',
-      'Desain Tema Standar',
-      'Perpanjang Rp.800.000',
-      'Optimasi SEO',
-      'Desain Responsif (Mobile)',
-      'Revisi 3x (Text/Gambar)',
-      'Maintenance Garansi 1 Tahun',
-      'Akses Dashboard Admin',
-      'Backup Data Tahunan',
-      'Bisa Upload/Edit Data',
-    ],
-    unavailable: [],
-  },
-  {
-    name: 'Business',
-    priceOriginal: 'Rp.5.500.000',
-    priceDiscounted: 'Rp.3.980.000',
-    features: [
-      'Domain .com .id',
-      'Hosting 2GB + 512MB RAM',
-      '8 Menu',
-      '7 Halaman',
-      'Desain Tema Standar',
-      'Perpanjang Rp.1.000.000',
-      'Optimasi SEO',
-      'Desain Responsif (Mobile)',
-      'Revisi 5x (Text/Gambar)',
-      'Maintenance Garansi 1 Tahun',
-      'Akses Dashboard Admin',
-      'Backup Data Bulanan',
-      'Bisa Upload/Edit Data',
-    ],
-    unavailable: [],
-  },
-]
+import React from "react";
+import { webPackages as packages } from "@/constants";
 
 export default function WebPrice() {
   return (
-    <section className="bg-black text-white py-20 px-4 flex flex-col items-center justify-center text-center">
-      <h2 className="text-center text-[#f22a98] text-8xl font-bold mb-5">Website Price List</h2>
-       <p className="text-center max-w-6xl  text-lg text-white/80 leading-relaxed mb-16">
-                       Pilih paket yang sesuai dengan kebutuhan dan anggaran kamu. Kami menyediakan layanan lengkap, dari domain, hosting, desain responsif, hingga optimasi SEO.
-                   </p>
-      <div className="flex flex-col justify-center items-center lg:flex-row lg:justify-center gap-10 min-w-md sm:min-w-6xl mx-auto">
+    <section className="bg-black text-white py-20 flex flex-col items-center justify-center text-center">
+      <h2 className="text-center text-[#f22a98] text-8xl font-bold mb-5">
+        Website Price List
+      </h2>
+      <p className="text-center max-w-6xl  text-lg text-white/80 leading-relaxed mb-16">
+        Pilih paket yang sesuai dengan kebutuhan dan anggaran kamu. Kami
+        menyediakan layanan lengkap, dari domain, hosting, desain responsif,
+        hingga optimasi SEO.
+      </p>
+      <div className="flex flex-col justify-center items-center lg:flex-row lg:justify-center gap-10 sm:min-w-4xl mx-auto">
         {packages.map((pkg, idx) => (
           <div
             key={idx}
-            className="rounded-2xl p-8 bg-black shadow-[0_0_10px_#f22a98] hover:shadow-[0_0_30px_#f22a98] transition duration-300 flex flex-col items-center w-full max-w-sm"
+            className="rounded-2xl p-8 bg-black shadow-[0_0_10px_#f22a98] hover:shadow-[0_0_30px_#f22a98] transition duration-300 flex flex-col items-center w-full min-w-[350px]"
           >
             <h3 className="text-3xl font-bold mb-2">{pkg.name}</h3>
-            <p className="text-lg text-gray-300 line-through">{pkg.priceOriginal}</p>
+            <p className="text-lg text-gray-300 line-through">
+              {pkg.priceOriginal}
+            </p>
             <p className="text-3xl font-bold shadow-[0_0_10px_#f22a98] px-4 py-2 rounded-xl mt-1 mb-6">
               {pkg.priceDiscounted}
             </p>
@@ -93,8 +34,8 @@ export default function WebPrice() {
                   key={i}
                   className={
                     pkg.unavailable.includes(i)
-                      ? 'text-gray-500 line-through'
-                      : 'text-white'
+                      ? "text-gray-500 line-through"
+                      : "text-white"
                   }
                 >
                   {feat}
@@ -109,5 +50,5 @@ export default function WebPrice() {
         ))}
       </div>
     </section>
-  )
+  );
 }
